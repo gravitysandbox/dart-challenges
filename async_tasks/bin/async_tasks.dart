@@ -4,7 +4,9 @@ import 'package:async_tasks/mutex_counter.dart';
 
 void main(List<String> arguments) async {
   final numbers = [1, 2, 3, 4, 5];
-  acyncCounter(numbers);
+  // firstAsyncCounter(numbers);
+  secondAsyncCounter(numbers);
+
   await mutexCounter(numbers);
 
   var mainToIsolateStream = await initIsolate();

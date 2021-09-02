@@ -17,9 +17,9 @@ Future<void> mutexCounter(List numbers) async {
   await randomDelay();
   await mutex.protect(() async {
     final stream = Stream.fromIterable(numbers);
-    await for (final number in stream) {
+    stream.listen((number) {
       print(number);
-    }
+    });
   });
   print('Finish Mutex Counter');
 }
